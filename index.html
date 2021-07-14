@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/style/main.css">
+    <link rel="stylesheet" href="assets/style/style.css">
+    <title>Vending_Machine</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-dark navbar-expand bg-dark text-light">
+            <a class="navbar-brand" href="#">
+                <img src="assets/img/logo.png" width="45" height="45" alt="" loading="lazy">
+                <span class="ml-2">Vending Machine</span>
+            </a>
+        </nav>
+    </header>
+    <main class="container-fluid">
+        <div class="row mt-5">
+            <div class="col-3 text-center align-self-center">
+                <h5>Your money:</h5>
+                <div>$ <span id="user_money">0.00</span></div>
+            </div>
+            <div class="col-6 vendingbox">
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-5 my-3 text-center">
+                        <button id="item1_button" onclick="app.vendingController.buyItem('item1')"><span
+                                id="item1_name">empty</span></button>
+                    </div>
+                    <div class="col-5 my-3 text-center">
+                        <button id="item2_button" onclick="app.vendingController.buyItem('item2')"><span
+                                id="item2_name">empty</span></button>
+                    </div>
+                    <div class="col-1"></div>
+
+                    <div class="col-1"></div>
+                    <div class="col-5 my-3 text-center">
+                        <button id="item3_button" onclick="app.vendingController.buyItem('item3')"><span
+                                id="item3_name">empty</span></button>
+                    </div>
+                    <div class="col-5 my-3 text-center">
+                        <button id="item4_button" onclick="app.vendingController.buyItem('item4')"><span
+                                id="item4_name">empty</span></button>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+            </div>
+            <div class="col-3 text-center align-self-center">
+                <div>$ <span id="vending_moeny">0.00</span></div>
+                <button id="quarterbtn" onclick="app.vendingController.insert_quarter()">Quarter</button>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-dark text-light">
+        <div class="text-center">
+            <p><small>Made with love by Jaron Warren</small></p>
+        </div>
+    </footer>
+
+    <script src="app/main.js" type="module"></script>
+</body>
+
+</html>
